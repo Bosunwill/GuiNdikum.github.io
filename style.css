@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+body{alink:#000099; link:#000099; vlink:#3333ff;}
+header{text-align:center; background-color:rgb(147, 86, 59); padding:10px;}
+.navbar{text-align:center; background-color:rgb(153, 153, 255);}
+.btn{text-align:center; vertical-align:center;}
+
+#paragraph1 {font-size:20px; color:green}
+#paragraph3 {background-color:green}
+#paragraph4 {background-image:url(Eden.jpg); background-repeat:repeat-x; background-position:1px 100px}
+.important {color:blue} 
+li {font-size:18px; color:yellow}
+dt {color:blue}
+dl {border-style:solid; border-color:gray; border-width:6px; width:900px}
+dd{font-style:italic; font-weight:bold}
+ul li{text-decoration:underline}
+a:link{color:purple; text-decoration:none}
+a:visited{color:purple; text-decoration:none}
+a:hover{color:blue; text-decoration:underline}
+dd:hover{color:gold; font-size:20px}
+p:first-letter{font-size:16px}
+#paragraph4:hover{font-size:20px; font-style:bold}
