@@ -64,40 +64,42 @@
 <section style="background-color: rgb(100, 120, 255); height: 800px;">
        
        <svg width="1500" height="750" style="background: gray;">
+        <defs>
+          <filter id="f1" x="0" y="0">
+          <feOffset result="offOut" in="SourceGraphic" dx="60" dy="80" />
+          <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+          </filter>
+          <filter id="f2" filterUnits="userSpaceOnUse" x="0" y="500" width="1300" height="800">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
+          <feOffset in="blur" dx="4" dy="6" result="offsetBlur" />
+          <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75"
+          specularExponent="20" lighting-color="rgb(100, 120, 225)" result="spaceOut">
+          <fePointLight x="-5000" y="-10000" z="20000" />
+          </feSpecularLighting>
+          <feComposite in="spaceOut" in2="SourceAlpha" operator="in" result="spaceOut" />
+          <feComposite in="SourceGraphic" in2="spaceOut" operator="arithmetic" k1="0" k2="1" k3="3" k4="0" result="litPaint" />
+          <feMerge>
+          <feMergeNode in="offsetBlur" />
+          <feMergeNode in="litPaint" />
+          </feMerge>
+          </filter>
+          
+          <radialGradient id="grad2" cx="50%" cy="100%" r="50%" fx="100%" fy="100%">
+            <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0" />
+            <stop offset="100%" style="stop-color:rgb(100,120,255); stop-opacity:1" />
+          </radialGradient>
+          <clipPath id="Circle">
+            <circle cx="250" cy="145" r="200" fill="#2FABFF" />
+          </clipPath>
+      </defs>
+
+      <image href="Portfolio_picFinal.jpg" alt="My portfolio pic" x="0" y="0" style="width:200; height:200;" clip-path="url(#Circle)" />
+      
        <svg width="1500" height="750" viewBox="-500 0 1300 800" fill="url(#grad2)">
-       <defs>
-           <filter id="f1" x="0" y="0">
-           <feOffset result="offOut" in="SourceGraphic" dx="60" dy="80" />
-           <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
-           </filter>
-           <filter id="f2" filterUnits="userSpaceOnUse" x="0" y="500" width="1300" height="800">
-           <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur" />
-           <feOffset in="blur" dx="4" dy="6" result="offsetBlur" />
-           <feSpecularLighting in="blur" surfaceScale="5" specularConstant="0.75"
-           specularExponent="20" lighting-color="rgb(100, 120, 225)" result="spaceOut">
-           <fePointLight x="-5000" y="-10000" z="20000" />
-           </feSpecularLighting>
-           <feComposite in="spaceOut" in2="SourceAlpha" operator="in" result="spaceOut" />
-           <feComposite in="SourceGraphic" in2="spaceOut" operator="arithmetic" k1="0" k2="1" k3="3" k4="0" result="litPaint" />
-           <feMerge>
-           <feMergeNode in="offsetBlur" />
-           <feMergeNode in="litPaint" />
-           </feMerge>
-           </filter>
-           
-           <radialGradient id="grad2" cx="50%" cy="100%" r="50%" fx="100%" fy="100%">
-             <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0" />
-             <stop offset="100%" style="stop-color:rgb(100,120,255); stop-opacity:1" />
-           </radialGradient>
-           <clipPath id="Circle">
-             <circle cx="250" cy="145" r="200" fill="#2FABFF" />
-           </clipPath>
-       </defs>
        <rect x="45" y="0" width="900" height="570" style="fill:rgb(138, 124, 124); stroke:black;" />
        <rect x="45" y="80" width="900" height="300" style="fill:rgb(255,255,25);
  stroke-width:1; stroke:rgb(123,12,20)" />
        <rect x="45" y="270" width="900" height="290" style="fill:forestgreen; stroke:aquamarine;" />
-       <image href="Portfolio_picFinal.jpg" alt="My portfolio pic" x="0" y="0" style="width:200; height:200;" clip-path="url(#Circle)" />
        <g filter="url(#f1)" transform="translate(5, 5)" >
         <text x="500" y="560" style="font-family:AR JULIAN; font-size:100">What I can do
         </text>
