@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC>
+<!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
@@ -63,17 +63,8 @@
 <br />
 <section style="background-color: rgb(100, 120, 255); height: 800px;">
        
-        <If IE>
-          <svg width="1000" height="600" viewBox="-100 -75 1150 10" preserveAspectRatio="xMinYMin meet" clip-path="url(#Circle)">
-           <defs>
-                 <clipPath id="Circle">
-                       <path d="M 10 350 C 10 0, 460 0, 500 350 L 500 400 C 500 400, 240 700, 10 400 Z" fill="#2FABFF" />
-                </clipPath>
-           </defs>
-            <image href="Portfolio_picFinal.jpg" alt="My portfolio pic" x="10" y="20" style="width:150; height:200;" />
-         </svg>
-        </endif>
-        <If !IE><defs>
+       <svg width="100%" height="750" >
+        <defs>
           <filter id="f1" x="0" y="0">
           <feOffset result="offOut" in="SourceGraphic" dx="60" dy="80" />
           <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
@@ -97,13 +88,11 @@
             <stop offset="0%" style="stop-color:rgb(255,255,255); stop-opacity:0" />
             <stop offset="100%" style="stop-color:rgb(100,120,255); stop-opacity:1" />
           </radialGradient>
+          <clipPath id="Circle">
+            <path d="M 10 350 C 10 0, 460 0, 500 350 L 500 400 C 500 400, 240 700, 10 400 Z" fill="#2FABFF" />
+          </clipPath>
       </defs>
          <svg width="1000" height="600" viewBox="-100 -75 1150 1000" preserveAspectRatio="xMinYMin meet" clip-path="url(#Circle)">
-           <defs>
-                 <clipPath id="Circle">
-                       <path d="M 10 350 C 10 0, 460 0, 500 350 L 500 400 C 500 400, 240 700, 10 400 Z" fill="#2FABFF" />
-                </clipPath>
-           </defs>
             <image href="Portfolio_picFinal.jpg" alt="My portfolio pic" x="10" y="20" style="width:150; height:200;" />
          </svg>
        <svg width="1500" height="750" viewBox="-500 0 1300 800" fill="url(#grad2)" preserveAspectRatio="xMinYMin meet">
@@ -169,9 +158,8 @@
 <use xlink:href="#R1" transform="rotate(800 550 620)" style="filter:url(#f1);"/>
 <use xlink:href="#R1" transform="rotate(800 800 720)" style="filter:url(#f1);"/>
 <use xlink:href="#R1" transform="rotate(800 800 800)" style="filter:url(#f1);"/>
-  </svg>
-        </endif>
-        
+       </svg>
+</svg>
 </section>
 <br /> <br /> <br /><br />
 <br /><br />
