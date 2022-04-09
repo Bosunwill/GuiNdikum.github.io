@@ -73,7 +73,7 @@
             <image href="Portfolio_picFinal.jpg" alt="My portfolio pic" x="10" y="20" style="width:150; height:200;" />
          </svg>
         </endif>
-        <defs>
+        <If !IE><defs>
           <filter id="f1" x="0" y="0">
           <feOffset result="offOut" in="SourceGraphic" dx="60" dy="80" />
           <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
@@ -170,6 +170,8 @@
 <use xlink:href="#R1" transform="rotate(800 800 720)" style="filter:url(#f1);"/>
 <use xlink:href="#R1" transform="rotate(800 800 800)" style="filter:url(#f1);"/>
   </svg>
+        </endif>
+        
 </section>
 <br /> <br /> <br /><br />
 <br /><br />
